@@ -1,0 +1,20 @@
+{
+  "name": "@acl/api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsx watch src/http/server.ts"
+  },
+  "devDependencies": {
+    "@acl/eslint-config": "workspace:*",
+    "@acl/prettier": "workspace:*",
+    "@acl/tsconfig": "workspace:*",
+    "@types/node": "^20",
+    "tsx": "^4.19.0"
+  },
+  "prettier": "@acl/prettier",
+  "eslintConfig": {
+    "extends": [
+      "@acl/eslint-config/node"
+    ]
+  }
+}
