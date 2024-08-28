@@ -2,14 +2,24 @@
   "name": "@acl/api",
   "version": "1.0.0",
   "scripts": {
-    "dev": "tsx watch src/http/server.ts"
+    "dev": "pnpm env:load tsx watch src/http/server.ts",
+     "db:migrate": "pnpm env:load prisma migrate dev",
+    "db:studio": "pnpm env:load prisma studio",
+    "db:seed": "pnpm env:load prisma db seed",
+    "env:load": "dotenv -e ../../.env --"
+
   },
   "devDependencies": {
     "@acl/eslint-config": "workspace:*",
     "@acl/prettier": "workspace:*",
+    "@acl/env": "workspace:*",
+    "dotenv-cli": "^7.4.2",
     "@acl/tsconfig": "workspace:*",
     "@types/node": "^20",
     "tsx": "^4.19.0"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "prettier": "@acl/prettier",
   "eslintConfig": {

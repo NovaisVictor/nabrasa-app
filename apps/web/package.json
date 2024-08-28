@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "pnpm env:load next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "env:load": "dotenv -e ../../.env --"
   },
   "dependencies": {
     "next": "14.2.7",
@@ -16,6 +17,8 @@
   "devDependencies": {
     "@acl/eslint-config": "workspace:*",
     "@acl/prettier": "workspace:*",
+    "@acl/env": "workspace:*",
+    "dotenv-cli": "^7.4.2",
     "@acl/tsconfig": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^18",
